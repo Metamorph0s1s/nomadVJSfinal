@@ -7,45 +7,49 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
     <div id="root">
-        <div id="weather" class="glassBox">
-            <span class="deg"></span><span class="degFeel"></span>
-        </div>
+        <header>
+            <article id="weather" class="glassBox">
+                <span class="deg"></span><span class="degFeel"></span>
+            </article>
+        </header>
 
-        <div id="divClock"></div>
-        
-        <div id="divForm" class="hidden">
-            <form id="frmLogin" class="hidden">
-                <h1>Hello! What's your name?</h1>
-                <input type="text" required="required" maxlength="15" value="" />
-                <button>Continue &gt;</button>
-            </form>
-        </div>
-        <div id="divGreeting" class="hidden">
-            <h1 id="greeting" class="hidden">HIIIIIII JAMES</h1>
-        </div>
+        <main>
+            <article id="clock"></article>
 
-        <div id="divTodo">
-            <form id="todo-form">
-                <input type="text" placeholder="Wrire a To Do and Press Enter" required />
-            </form>
-            <ul id="todo-list">
-                <li>aasdf</li>
-                <li>222222222</li>
-            </ul>
-        </div>
+            <article id="divForm" class="hidden">
+                <form id="frmLogin">
+                    <h1>Hello! What's your name?</h1>
+                    <input type="text" required="required" maxlength="15" value="" />
+                    <button><span>Continue &gt;</span></button>
+                </form>
+            </article>
+            <article id="divGreeting" class="hidden">
+                <h1 id="greeting"></h1>
+            </article>
+
+            <article id="todo">
+                <form id="frmTodo">
+                    <input type="text" placeholder="Wrire a To Do and Press Enter" required />
+                </form>
+                <ul id="listTodo"></ul>
+            </article>
+        </main>
 
         <footer></footer>
     </div>
+    <script src="js/bgImg.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/bgImg.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/todo.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
   padding: 0;
 }
 html {
-  font-family: "Roboto", serif;
+  font-family: "Roboto", "Noto Sans KR", serif;
   font-size: 62.5%;
   color: white;
 }
@@ -18,15 +18,26 @@ li {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   align-items: center;
+}
+header {
+  align-self: flex-end;
+  height: 96px;
+}
+main {
+  flex: 1;
+}
+footer {
+  height: 20px;
 }
 
 h1 {
   font-size: 5rem;
   font-weight: normal;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 #frmLogin {
@@ -65,20 +76,60 @@ input::placeholder {
 #frmLogin button:hover {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);  
+  -webkit-backdrop-filter: blur(4px);
   transition: 0.2s;
 }
+#frmLogin button:hover span {
+  display: none;
+}
+#frmLogin button:hover:before {
+  content: "Continue >>>";
+}
 
-#divClock {
+#frmTodo {
+  text-align: center;
+  margin: 20px 0 30px;
+}
+#frmTodo input[type="text"] {
+  font-size: 2rem;
+}
+#frmTodo input::placeholder {
+  color: rgb(239, 239, 239);
+}
+#listTodo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+#listTodo li {
+  list-style: none;
+  margin: 5px 5px;
+  font-size: 2rem;
+  padding: 5px 10px;
+}
+#listTodo li button {
+  margin-left: 10px;
+  border: 0;
+  background: none;
+  filter: opacity(30%);
+}
+#listTodo li button:hover {
+  filter: opacity(100%);
+}
+
+
+#clock {
+  text-align: center;
   font-size: 11rem;
   font-weight: 500;
   letter-spacing: -3px;
+  margin-top: 12rem;
 }
 
 #weather {
-  align-self: flex-end;
   font-size: 1.3rem;
-  width: 150px;
+  width: 130px;
   height: 76px;
   padding: 0 10px 10px 10px;
   margin: 10px;
@@ -115,4 +166,8 @@ input::placeholder {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hidden {
+  display: none;
 }

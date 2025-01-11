@@ -1,6 +1,6 @@
-const toDoForm = document.querySelector("form#todo-form");
-const toDoInput = toDoForm.querySelector("input");
-const toDoList = document.querySelector("ul#todo-list");
+const toDoForm = document.querySelector("form#frmTodo");
+const toDoInput = toDoForm.querySelector("#frmTodo input");
+const toDoList = document.querySelector("ul#listTodo");
 
 const TODOS_KEY = "toDos";
 
@@ -13,18 +13,22 @@ function saveToDos() {
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
+  li.classList.add("glassBox");
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
-  button.innerText = "❌";
+  const spanDel = document.createElement("span");
+  const imgDel = document.createElement("img");
+  imgDel.src = "asset/del.png";
+  imgDel.width = "12"
   button.addEventListener("click", deleteToDo);
   li.appendChild(span);
-  li.appendChild(button);
+  li.appendChild(button).appendChild(spanDel).appendChild(imgDel);
   toDoList.appendChild(li);
 }
 
 function deleteToDo(event) {
-  const li = event.target.parentElement;
+  const li = event.target.parentElement.parentElement.parentElement;
   li.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveToDos();

@@ -8,9 +8,9 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const divWeather = document.querySelector("div#weather");
-      const divDeg = document.querySelector("div#weather span:first-child");
-      const feelsLike = document.querySelector("div#weather span:last-child");
+      const divWeather = document.querySelector("article#weather");
+      const divDeg = document.querySelector("article#weather span:first-child");
+      const feelsLike = document.querySelector("article#weather span:last-child");
       const wIco = document.createElement("img");
       wIco.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
       wIco.alt = `${data.weather[0].description}`;
