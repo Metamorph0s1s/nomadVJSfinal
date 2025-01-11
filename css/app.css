@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Roboto", serif;
+  font-size: 62.5%;
+  color: white;
+}
+div,
+span,
+p,
+ul,
+li {
+  box-sizing: border-box;
+}
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: normal;
+  letter-spacing: -3px;
+  margin-bottom: 10px;
+}
+
+#frmLogin {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+input[type="text"] {
+  width: 40rem;
+  border-width: 0 0 3px;
+  border-color: white;
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+  background: none;
+  outline: none;
+}
+input::placeholder {
+  opacity: 0.5;
+  color: rgb(219, 219, 219);
+}
+#frmLogin button {
+  padding: 10px;
+  margin: 30px 0;
+  width: 14rem;
+  border: 0;
+  border-radius: 20px;
+  background: none;
+  color: white;
+  border: 2px solid white;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+#frmLogin button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);  
+  transition: 0.2s;
+}
+
+#divClock {
+  font-size: 11rem;
+  font-weight: 500;
+  letter-spacing: -3px;
+}
+
+#weather {
+  align-self: flex-end;
+  font-size: 1.3rem;
+  width: 150px;
+  height: 76px;
+  padding: 0 10px 10px 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  text-align: center;
+}
+#weather img {
+  width: 50px;
+  height: 50px;
+}
+#weather span.deg {
+  font-size: 2rem;
+}
+#weather span.degFeel {
+  grid-column: 1/3;
+}
+
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.glassBox {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}

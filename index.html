@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang=ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <div id="weather" class="glassBox">
+            <span class="deg"></span><span class="degFeel"></span>
+        </div>
+
+        <div id="divClock"></div>
+        
+        <div id="divForm" class="hidden">
+            <form id="frmLogin" class="hidden">
+                <h1>Hello! What's your name?</h1>
+                <input type="text" required="required" maxlength="15" value="" />
+                <button>Continue &gt;</button>
+            </form>
+        </div>
+        <div id="divGreeting" class="hidden">
+            <h1 id="greeting" class="hidden">HIIIIIII JAMES</h1>
+        </div>
+
+        <div id="divTodo">
+            <form id="todo-form">
+                <input type="text" placeholder="Wrire a To Do and Press Enter" required />
+            </form>
+            <ul id="todo-list">
+                <li>aasdf</li>
+                <li>222222222</li>
+            </ul>
+        </div>
+
+        <footer></footer>
+    </div>
+    <script src="js/weather.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/bgImg.js"></script>
+</body>
+
+</html>
