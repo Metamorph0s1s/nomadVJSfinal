@@ -21,7 +21,7 @@ function stringSwitch() {
 
   if (strHour < 12 && strHour > 4) {
     return "morning";
-  } else if (strHour < 19) {
+  } else if (strHour < 19 && strHour > 11) {
     return "afternoon";
   } else {
     return "evening";
