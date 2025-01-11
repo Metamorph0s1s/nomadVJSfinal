@@ -1,7 +1,6 @@
-const loginForm = document.querySelector("#frmLogin");
-const loginInput = document.querySelector("#frmLogin input");
-const divForm = document.querySelector("article#divForm");
-const divGreeting = document.querySelector("article#divGreeting");
+const frmLogin = document.querySelector("form#frmLogin");
+const loginInput = document.querySelector("form#frmLogin input");
+const divFrmLogin = document.querySelector("div#divFrmLogin");
 const greeting = document.querySelector("h1#greeting");
 const savedUsername = localStorage.getItem("username");
 
@@ -10,7 +9,7 @@ const USERNAME_KEY = "username";
 
 function onLoginSubmit(e) {
   e.preventDefault();
-  divForm.classList.add(HIDDEN_CLASSNAME);
+  divFrmLogin.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
   paintGrettings(username);
@@ -31,12 +30,12 @@ function stringSwitch() {
 
 function paintGrettings(username) {
   greeting.innerText = `Good ${stringSwitch()}! ${username}`;
-  divGreeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
 if (savedUsername === null) {
-  divForm.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener("submit", onLoginSubmit);
+    divFrmLogin.classList.remove(HIDDEN_CLASSNAME);
+    frmLogin.addEventListener("submit", onLoginSubmit);
 } else {
   paintGrettings(savedUsername);
 }

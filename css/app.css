@@ -6,6 +6,8 @@ html {
   font-family: "Roboto", "Noto Sans KR", serif;
   font-size: 62.5%;
   color: white;
+  height: 100vh;
+  overflow: hidden;
 }
 div,
 span,
@@ -14,11 +16,13 @@ ul,
 li {
   box-sizing: border-box;
 }
+body {
+  height: 100vh;
+}
 #root {
   height: 100vh;
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
 header {
@@ -27,6 +31,18 @@ header {
 }
 main {
   flex: 1;
+}
+#clock {
+  height: 132px;
+}
+#atcGreeting {
+  height: 60px;
+}
+#todo {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 footer {
   height: 20px;
@@ -96,6 +112,7 @@ input::placeholder {
 #frmTodo input::placeholder {
   color: rgb(239, 239, 239);
 }
+
 #listTodo {
   display: flex;
   flex-wrap: wrap;
@@ -117,7 +134,6 @@ input::placeholder {
 #listTodo li button:hover {
   filter: opacity(100%);
 }
-
 
 #clock {
   text-align: center;
