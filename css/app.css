@@ -239,10 +239,10 @@ body::after {
   cursor: pointer;
   color: white;
   font-weight: 700;
-  background: salmon;
+  background-color: salmon;
   border-radius: 5px;
   border: 0 solid salmon;
 }
 #dialogContainer button:hover {
-  color: black;
+  background-color: indianred;
 }
