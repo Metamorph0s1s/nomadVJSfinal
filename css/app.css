@@ -199,6 +199,6 @@ body::after {
   overflow: hidden;
   z-index: -99;
 
-  content: url(asset/0.webp) url(asset/1.webp) url(asset/2.webp)
-    url(asset/3.webp) url(asset/4.webp) url(asset/5.webp);
+  content: url(../asset/0.webp) url(../asset/1.webp) url(../asset/2.webp)
+    url(../asset/3.webp) url(../asset/4.webp) url(../asset/5.webp);
 }
