@@ -1,4 +1,4 @@
-const fileNames = ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+const fileNames = ["0.webp", "1.webp", "2.webp", "3.webp", "4.webp", "5.webp"];
 const imgName = fileNames[parseInt(Math.random() * fileNames.length)];
 
 const bgImg = document.createElement("img");
