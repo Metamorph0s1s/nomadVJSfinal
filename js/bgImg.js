@@ -4,6 +4,7 @@ const imgName = fileNames[parseInt(Math.random() * fileNames.length)];
 const bgImg = document.createElement("img");
 
 bgImg.src = `asset/${imgName}`;
-bgImg.id = 'bg';
+bgImg.id = "bg";
+bgImg.decoding = "async";
 
 document.body.appendChild(bgImg);
