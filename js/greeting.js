@@ -3,6 +3,7 @@ const loginInput = document.querySelector("form#frmLogin input");
 const divFrmLogin = document.querySelector("div#divFrmLogin");
 const greeting = document.querySelector("h1#greeting");
 const savedUsername = localStorage.getItem("username");
+const secLogOut = document.querySelector("#logout");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -12,6 +13,7 @@ function onLoginSubmit(e) {
   divFrmLogin.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
+  loginInput.value = "";
   paintGrettings(username);
 }
 
@@ -31,6 +33,7 @@ function stringSwitch() {
 function paintGrettings(username) {
   greeting.innerText = `Good ${stringSwitch()}! ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
+  secLogOut.classList.remove(HIDDEN_CLASSNAME);
 }
 
 if (savedUsername === null) {
