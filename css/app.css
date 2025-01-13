@@ -193,7 +193,7 @@ input::placeholder {
 .hidden {
   display: none;
 }
-
+/*
 body::after {
   position: absolute;
   width: 0;
@@ -204,7 +204,7 @@ body::after {
   content: url(../asset/0.webp) url(../asset/1.webp) url(../asset/2.webp)
     url(../asset/3.webp) url(../asset/4.webp) url(../asset/5.webp);
 }
-
+*/
 #dialogContainer {
   position: absolute;
   top: 100vh;
