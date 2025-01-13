@@ -141,7 +141,8 @@ input::placeholder {
   font-size: 11rem;
   font-weight: 500;
   letter-spacing: -3px;
-  margin-top: 8rem;
+  margin-top: 15vh;
+  text-shadow: 4px 4px 0px rgba(58, 58, 58, 0.4);
 }
 
 #weather {
@@ -245,4 +246,8 @@ body::after {
 }
 #dialogContainer button:hover {
   background-color: indianred;
+}
+
+#video {
+  position: fixed; width: 100vw; height: 100vh; left: 0; bottom: 0; z-index:-99;
 }
