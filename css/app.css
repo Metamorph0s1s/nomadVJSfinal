@@ -31,7 +31,12 @@ header {
   height: 96px;
 }
 main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   flex: 1;
+  overflow: hidden;
 }
 #clock {
   height: 132px;
